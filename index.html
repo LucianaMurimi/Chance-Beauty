@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Chance Beauty</title>
+
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/ionicons@4.4.6/dist/css/ionicons.min.css">
+</head>
+<body>
+
+<div class="wrapper">
+	<header class="page-header">
+		<h1>Chance Beauty</h1>
+		<p class="slogan">...be your own kind of beauty!</p>
+		<div class="menu-icon" onclick="myFunction()">
+			<div class="menu-icon-bars"></div>
+			<div class="menu-icon-bars"></div>
+			<div class="menu-icon-bars"></div>
+		</div>
+		<div id="menu-icon-options-id" class="menu-icon-options">
+		    <a href="#">Home</a>
+		    <a href="#">Shop</a>
+		    <a href="#">Contact</a>
+		 </div>
+	</header>
+	<main class="page-main">
+		<div class="page-main-txt">
+			<p>At Chance Beauty, we pride ourselves in offering the best custom-created hair extensions to match your personality and personal lifestyle. Bringing out your extraordinary kind of beauty.</p>
+			<button class="shop-button" onClick="parent.location='photo-gallery.html'">Shop Now!</button>
+			<p>Your one stop online retail shop, for the best human hair and synthetic hair extensions.</p>
+		</div>
+	</main>
+	<footer class="page-footer">
+		<small id="page-footer-msg">&copy; Copyright 2020. All rights reserved.</small>
+		<ul>
+			<li>
+				<a href="" target="_blank">
+					<i class="icon ion-logo-instagram"></i>
+				</a>
+			</li>
+			<li>
+				<a href="" target="_blank">
+					<i class="icon ion-logo-facebook"></i>
+				</a>
+			</li>
+			<li>
+				<a href="" target="_blank">
+					<i class="icon ion-logo-twitter"></i>
+				</a>
+			</li>
+		</ul>
+	</footer>
+</div>
+
+<script>
+	/* When the user clicks on the button,
+	toggle between hiding and showing the dropdown content */
+	function myFunction() {
+	  document.getElementById("menu-icon-options-id").classList.toggle("show");
+	}
+
+	// Close the dropdown menu if the user clicks outside of it
+	window.onclick = function(event) {
+	  if (!event.target.matches('.menu-icon')) {
+	    var dropdowns = document.getElementsByClassName("menu-icon-options");
+	    var i;
+	    for (i = 0; i < dropdowns.length; i++) {
+	      var openDropdown = dropdowns[i];
+	      if (openDropdown.classList.contains('show')) {
+	        openDropdown.classList.remove('show');
+	      }
+	    }
+	  }
+	}
+</script>
+</body>
+</html>

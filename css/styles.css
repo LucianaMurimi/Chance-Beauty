@@ -1,0 +1,323 @@
+@font-face {
+font-family: 'Lovelyn';
+src: url('Lovelyn Free Personal Use.otf'); /* IE9 Compat Modes */
+src: url('Lovelyn Free Personal Use?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+url('Lovelyn Free Personal Use.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+font-family: 'Hello Olivia';
+src: url('File Font Hello Olivia/Hello Olivia/Hello Olivia.otf'); /* IE9 Compat Modes */
+src: url('File Font Hello Olivia/Hello Olivia/Hello Olivia.otf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+url('File Font Hello Olivia/Hello Olivia/Hello Olivia.woff?#iefix') format('woff'), /* Modern Browsers */
+url('File Font Hello Olivia/Hello Olivia/Hello Olivia.ttf?#iefix') format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+font-family: 'Montserrat';
+src: url('Montserrat/Montserrat-ExtraLight.ttf'); /* IE9 Compat Modes */
+src: url('Montserrat/Montserrat-ExtraLight.ttf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+url('Montserrat/Montserrat-ExtraLight.ttf?#iefix') format('truetype'), /* Safari, Android, iOS */
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	/*formatting text*/
+	font-size: 100%;
+	font-family: "Montserrat", Georgia, serif;
+
+	line-height: 2;
+
+	background-color: #f2f2f2;
+}
+/*
+===============================================================================
+Wrapper styling
+*/
+.wrapper {
+ 	display: flex;
+ 	flex-direction: column;
+ 	min-height: 100vh
+ }
+ .wrapper >* {
+ 	padding: 20px;
+ }
+ /*
+===============================================================================
+Header styling
+*/
+ .page-header {
+ 	background-color: #f2f2f2;
+ 	/*box-shadow: 0 0 10px 0 #231f20;*/
+ }
+/*headings*/
+h1, h2, h3 {
+	font-family: "Lovelyn", "Marko One", Georgia, serif;
+	}
+h1 {
+	font-size: 2.3em;
+	letter-spacing: 5px; 
+	word-spacing: 15px;
+	color: #722227;
+	text-shadow: .1em .1em .2em #f4c6b1; /*text-shadow: horizontal_offset vertical_offset blur_radius color*/
+	text-align: center;
+	margin-bottom: 0; 
+}
+/*slogan styling*/
+.slogan {
+	font-family: "Hello Olivia", Georgia, serif;
+	font-weight: bolder;
+	letter-spacing: 1px;
+	text-align: center;
+}
+/*menu icon*/
+.menu-icon {
+  	cursor: pointer;
+	position: relative;
+	display: inline-block;
+	float: right;
+}
+.menu-icon-bars {
+  width: 35px;
+  height: 3px;
+  background-color: #021300;
+  margin: 6px 0;
+}
+/*dropdown content (Hidden by Default) */
+.menu-icon-options {
+	display: none;
+	right: 60px;
+	position: absolute;
+	float: right;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	border-radius: 3px;
+	z-index: 1;
+}
+/*links inside the dropdown */
+.menu-icon-options a {
+  color: black;
+  padding: 8px 10px;
+  text-decoration: none;
+  display: block;
+}
+/*show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+/*
+===============================================================================
+Main styling
+*/
+.page-main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;	/*vertically justified center*/
+	align-items: center;	/*horizontally justified center*/
+	flex-grow: 1;	/*expands to cover available space inside the flex container*/
+	background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ), #722227 url(../images/pexels-godisable-jacob-718978.jpg) no-repeat center/cover;
+	background-blend-mode: luminosity;
+	color: #ffffff;
+}
+.page-main div {
+	text-align: center;
+}
+.page-main p + p {
+	margin-top: 10px
+}
+.page-main-gallery {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;	/*vertically justified center*/
+	align-items: center;	/*horizontally justified center*/
+	flex-grow: 1;	
+}
+/*
+===============================================================================
+Shop button styling
+*/
+.shop-button {
+	font-family: "Lovelyn", serif;
+	font-size: 1.5em;
+	font-weight: bold;
+	background-color: #f4c6b1;
+	color: #722227;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 20px 20px;
+	cursor: pointer;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.shop-button:hover {
+	border: 1px solid #fff;
+	background-color: #f2f2f2;
+}
+
+/*
+===============================================================================
+Page footer styling
+*/
+.page-footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background: #f2f2f2;
+
+}
+/*logos list*/
+.page-footer ul {
+	display: flex;
+	font-size: 1.5rem;
+	margin-bottom: 5px;
+	list-style: none;
+}
+.page-footer ul li a {
+	text-decoration: none;
+	color: #722227;
+}
+.page-footer ul li:not(:last-child) {
+	margin-right: 20px;
+}
+
+/*
+===============================================================================
+photo-gallery.html Image grid styling
+*/
+.gallery {
+    display: grid; /*define grid container-8*8 grid container*/
+    grid-template-columns: repeat(8, 1fr);	/*set column tracks*/
+    grid-template-rows: repeat(8, 5vw);		/*set row tracks. set is: 8 rows each with the height of 5 viewport width*/
+    grid-gap: 5px;		/*grid gap between columns and containers*/
+}
+/*styling images*/
+.gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.gallery__item--1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.gallery__item--2 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.gallery__item--3 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 6;
+}
+.gallery__item--4 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 6;
+}
+.gallery__item--5 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 9;
+}
+.gallery__item--6 {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 6;
+    grid-row-end: 9;
+}
+.gallery__item--7 {
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 6;
+    grid-row-end: 9;
+}
+/*
+===============================================================================
+Media Queries to achieve Responsiveness
+*/
+@media screen and (max-width: 550px) {
+	.wrapper >* {
+	 	padding: 12px;
+	 }
+	body {
+		font-size: 80%;
+	}
+	h1 {
+		font-size: 1.8em;
+		letter-spacing: 4px; 
+		word-spacing: 12px;
+	}
+	.menu-icon-bars {
+	   width: 28px;
+	   height: 2px;
+	}
+	.shop-button {
+		font-size: 1.2em;
+	}
+	.gallery {
+	    display: grid; /*define grid container-8*8 grid container*/
+	    grid-template-columns: repeat(8, 1fr);	/*set column tracks*/
+	    grid-template-rows: repeat(15, 12vw);		/*set row tracks. set is: 8 rows each with the height of 5 viewport width*/
+	    grid-gap: 3px;		/*grid gap between columns and containers*/
+	}
+	.gallery__item--1 {
+	    grid-column-start: 1;
+	    grid-column-end: 5;
+	    grid-row-start: 1;
+	    grid-row-end: 6;
+	}
+	.gallery__item--2 {
+	    grid-column-start: 5;
+	    grid-column-end: 9;
+	    grid-row-start: 1;
+	    grid-row-end: 3;
+	}
+	.gallery__item--3 {
+	    grid-column-start: 5;
+	    grid-column-end: 9;
+	    grid-row-start: 3;
+	    grid-row-end: 6;
+	}
+	.gallery__item--4 {
+	    grid-column-start: 1;
+	    grid-column-end: 9;
+	    grid-row-start: 6;
+	    grid-row-end: 9;
+	}
+	.gallery__item--5 {
+	    grid-column-start: 1;
+	    grid-column-end: 5;
+	    grid-row-start: 9;
+	    grid-row-end: 12;
+	}
+	.gallery__item--6 {
+	    grid-column-start: 5;
+	    grid-column-end: 9;
+	    grid-row-start: 9;
+	    grid-row-end: 12;
+	}
+	.gallery__item--7 {
+	    grid-column-start: 1;
+	    grid-column-end: 9;
+	    grid-row-start: 12;
+	    grid-row-end: 15;
+	}
+}
+
+
+

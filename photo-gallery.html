@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chance Beauty Gallery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Chance Beauty Gallery</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/ionicons@4.4.6/dist/css/ionicons.min.css">
+</head>
+<body>
+<div class="wrapper">
+	<header class="page-header">
+		<h1>Chance Beauty</h1>
+		<p class="slogan">...be your own kind of beauty!</p>
+	</header>
+	<main class="page-main-gallery">
+		<div class="gallery">
+			  <figure class="gallery__item gallery__item--1">
+			    <img src="images/etty-fidele-ESDwc50A_tw-unsplash.jpg" class="gallery__img" alt="Image 1">
+			  </figure>
+			  <figure class="gallery__item gallery__item--2">
+			    <img src="images/jazmin-quaynor-zyZ77eaVU2Q-unsplash.jpg" class="gallery__img" alt="Image 2">
+			  </figure>
+			  <figure class="gallery__item gallery__item--3">
+			    <img src="images/etty-fidele-ESDwc50A_tw-unsplash.jpg" class="gallery__img" alt="Image 3">
+			  </figure>
+			  <figure class="gallery__item gallery__item--4">
+			    <img src="images/pexels-godisable-jacob-718978.jpg" class="gallery__img" alt="Image 4">
+			  </figure>
+			  <figure class="gallery__item gallery__item--5">
+			    <img src="images/etty-fidele-ESDwc50A_tw-unsplash.jpg" class="gallery__img" alt="Image 5">
+			  </figure>
+			  <figure class="gallery__item gallery__item--6">
+			    <img src="images/pexels-godisable-jacob-718978.jpg" class="gallery__img" alt="Image 6">
+			  </figure>
+			  <figure class="gallery__item gallery__item--7">
+			    <img src="images/jazmin-quaynor-zyZ77eaVU2Q-unsplash.jpg" class="gallery__img" alt="Image 6">
+			  </figure>
+		</div>
+	</main>
+	<footer class="page-footer">
+		<small id="page-footer-msg">&copy; Copyright 2020. All rights reserved.</small>
+		<ul>
+			<li>
+				<a href="" target="_blank">
+					<i class="icon ion-logo-instagram"></i>
+				</a>
+			</li>
+			<li>
+				<a href="" target="_blank">
+					<i class="icon ion-logo-facebook"></i>
+				</a>
+			</li>
+			<li>
+				<a href="" target="_blank">
+					<i class="icon ion-logo-twitter"></i>
+				</a>
+			</li>
+		</ul>
+	</footer>
+</div>
+<script>
+	// It checks to see if the span id #heart has "liked" class, if not it run the else statement and adds the "liked" class, on a 2nd click it see that it has the "liked" class so it replaces the ihherHTML and removes class, on 3rd click it runs the else statement again cause there is no "liked" class(remomved on 2nd click).
+
+$(document).ready(function(){
+  $("#heart").click(function(){
+    if($("#heart").hasClass("liked")){
+      $("#heart").html('<i class="fa fa-heart-o" aria-hidden="true"></i>');
+      $("#heart").removeClass("liked");
+    }else{
+      $("#heart").html('<i class="fa fa-heart" aria-hidden="true"></i>');
+      $("#heart").addClass("liked");
+    }
+  });
+});
+</script>
+</body>
+</html>
