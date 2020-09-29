@@ -257,6 +257,13 @@ Media Queries to achieve Responsiveness
 	body {
 		font-size: 80%;
 	}
+	.page-main {
+		background: linear-gradient(
+	      rgba(0, 0, 0, 0.5),
+	      rgba(0, 0, 0, 0.5)
+	    ), #722227 url(../images/pexels-godisable-jacob-718978-minimized.jpg) no-repeat center/cover;
+		background-blend-mode: luminosity;
+	}
 	h1 {
 		font-size: 1.8em;
 		letter-spacing: 4px; 
