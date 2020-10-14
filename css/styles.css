@@ -218,6 +218,26 @@ Page footer styling
 ===============================================================================
 photo-gallery.html Image grid styling
 */
+figure {
+	position: relative;
+}
+.overlay {
+	position: absolute;
+	bottom: 0;
+  	background: rgb(0, 0, 0);
+  	background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  	color: #f1f1f1;
+  	width: 100%;
+  	transition: .5s ease;
+  	opacity:0;
+  	color: white;
+  	font-size: 80%;
+  	padding: 3px;
+  	text-align: center;
+}
+figure:hover .overlay {
+  opacity: 1;
+}
 .gallery {
 	display: grid; /*define grid container-8*8 grid container*/
 	grid-template-columns: repeat(8, 1fr);	/*set column tracks*/

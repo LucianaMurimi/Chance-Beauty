@@ -14,7 +14,8 @@
 	<header class="page-header">
 		<h1>Chance Beauty</h1>
 		<p class="slogan">...be your own kind of beauty!</p>
-		<div class="menu-icon" onclick="myFunction()">
+		<!--<div class="menu-icon" onclick="myFunction()">-->
+		<div class="menu-icon">
 			<div class="menu-icon-bars"></div>
 			<div class="menu-icon-bars"></div>
 			<div class="menu-icon-bars"></div>
@@ -57,8 +58,17 @@
 <script>
 	/* When the user clicks on the button,
 	toggle between hiding and showing the dropdown content */
-	function myFunction() {
+	/*function myFunction() {
 	  document.getElementById("menu-icon-options-id").classList.toggle("show");
+	}*/
+
+	var menuIcon = document.getElementsByClassName("menu-icon");
+	var myFunction = function() {
+	    document.getElementById("menu-icon-options-id").classList.toggle("show");
+	};
+
+	for (var i = 0; i < menuIcon.length; i++) {
+	    menuIcon[i].addEventListener('click', myFunction);
 	}
 
 	// Close the dropdown menu if the user clicks outside of it
